@@ -6,7 +6,7 @@ import { addUser } from '../redux/slices/userSlice';
 import { BASE_URL } from '../utils/constants';
 
 const Login = () => {
-  const [emailId, setEmailId] = useState('simranbhandari060@gmail.com');
+  const [emailId, setEmailId] = useState('');
   const [password, setPassword] = useState('P@ssword@123');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -28,7 +28,7 @@ const Login = () => {
       dispatch(addUser(res.data.data));
       return navigate('/');
     } catch (err) {
-      setError(err?.response?.data || 'Something went wrong');
+      setError(err?.response?.data?.message || 'Something went wrong');
     }
   };
 
@@ -42,7 +42,7 @@ const Login = () => {
       dispatch(addUser(res.data.data));
       return navigate('/profile');
     } catch (err) {
-      setError(err?.response?.data || 'Something went wrong');
+      setError(err?.response?.data?.message || 'Something went wrong');
     }
   };
 
