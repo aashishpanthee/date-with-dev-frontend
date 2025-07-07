@@ -1,4 +1,4 @@
-# Date Developer Web 💕
+# Date Developer Web
 
 A modern social networking web application built with React, Redux Toolkit, and TailwindCSS. This application allows users to discover potential matches, send connection requests, manage their profiles, and interact with other users in a clean and intuitive interface.
 
